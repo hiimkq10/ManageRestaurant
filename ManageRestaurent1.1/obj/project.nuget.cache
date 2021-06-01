@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "JK0NxoMv9YEZVazy6YbRr2hv+sw77bTvWOB8v1UprPKRtgr6/bBF8O0URBUq6F+ja/3SOixYaWVIHs23nZs29g==",
+  "success": true,
+  "projectFilePath": "D:\\ManageRestaurant\\ManageRestaurent1.1\\ManageRestaurent1.1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\guna.ui2.winforms\\2.0.1.4\\guna.ui2.winforms.2.0.1.4.nupkg.sha512"
+  ],
+  "logs": []
+}

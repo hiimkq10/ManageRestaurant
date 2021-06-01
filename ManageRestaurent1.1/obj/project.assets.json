@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "Guna.UI2.WinForms/2.0.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Guna.UI2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "Guna.UI2.WinForms/2.0.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Guna.UI2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "Guna.UI2.WinForms/2.0.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Guna.UI2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "Guna.UI2.WinForms/2.0.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Guna.UI2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Guna.UI2.WinForms/2.0.1.4": {
+      "sha512": "UOSLx1Iy8MoypqX6PNS/GRSy/u59lVTSaM4c9+jpU7YN+rnbhCzIIJlpnRF/m+1crElNpzqNWT5Sy5B+Z6usyg==",
+      "type": "package",
+      "path": "guna.ui2.winforms/2.0.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "guna.ui2.winforms.2.0.1.4.nupkg.sha512",
+        "guna.ui2.winforms.nuspec",
+        "icon.png",
+        "lib/net40/Guna.UI2.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "Guna.UI2.WinForms >= 2.0.1.4"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\ManageRestaurant\\ManageRestaurent1.1\\ManageRestaurent1.1.csproj",
+      "projectName": "ManageRestaurent1.1",
+      "projectPath": "D:\\ManageRestaurant\\ManageRestaurent1.1\\ManageRestaurent1.1.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "D:\\ManageRestaurant\\ManageRestaurent1.1\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "Guna.UI2.WinForms": {
+            "target": "Package",
+            "version": "[2.0.1.4, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

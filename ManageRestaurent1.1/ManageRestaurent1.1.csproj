@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +48,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Spire.Doc">
+      <HintPath>..\..\Spire\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License">
+      <HintPath>..\..\Spire\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf">
+      <HintPath>..\..\Spire\Spire.Pdf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,28 +71,158 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NhanVien_f\Class\Account.cs" />
+    <Compile Include="NhanVien_f\Form\addEmployeeForm%281.1%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Class\Ca.cs" />
+    <Compile Include="NhanVien_f\Form\changePasswordForm%281.1%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Form\checkInAndOutForm%281.1%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Form\checkInAndOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Form\createAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Class\DiemDanh.cs" />
+    <Compile Include="NhanVien_f\Form\editEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Class\Employee.cs" />
+    <Compile Include="NhanVien_f\Form\formManageEmployee%281.1%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="NhanVien_f\Class\Job.cs" />
+    <Compile Include="NhanVien_f\Form\loginForm%281.1%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Form\luongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien_f\Form\manageSalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Form\manageShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myDB.cs" />
+    <Compile Include="NhanVien_f\Form\numberOfEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Class\PhanCa.cs" />
+    <Compile Include="NhanVien_f\Form\phanCaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien_f\Form\quanLiCaLamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\Class\Luong.cs" />
+    <Compile Include="NhanVien_f\Form\salaryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\UserControl_f\scheduleItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\UserControl_f\scheduleItem.Designer.cs">
+      <DependentUpon>scheduleItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien_f\UserControl_f\scheduleListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\UserControl_f\scheduleListItem.Designer.cs">
+      <DependentUpon>scheduleListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien_f\UserControl_f\scheduleListWorkingItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVien_f\UserControl_f\scheduleListWorkingItem.Designer.cs">
+      <DependentUpon>scheduleListWorkingItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="NhanVien_f\Class\User.cs" />
+    <EmbeddedResource Include="NhanVien_f\Form\addEmployeeForm%281.1%29.resx">
+      <DependentUpon>addEmployeeForm%281.1%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\changePasswordForm%281.1%29.resx">
+      <DependentUpon>changePasswordForm%281.1%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\checkInAndOutForm%281.1%29.resx">
+      <DependentUpon>checkInAndOutForm%281.1%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\checkInAndOutForm.resx">
+      <DependentUpon>checkInAndOutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\createAccountForm.resx">
+      <DependentUpon>createAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\editEmployeeForm.resx">
+      <DependentUpon>editEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\formManageEmployee%281.1%29.resx">
+      <DependentUpon>formManageEmployee%281.1%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\loginForm%281.1%29.resx">
+      <DependentUpon>loginForm%281.1%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\luongForm.resx">
+      <DependentUpon>luongForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\manageSalaryForm.resx">
+      <DependentUpon>manageSalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\manageShiftForm.resx">
+      <DependentUpon>manageShiftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\numberOfEmployeeForm.resx">
+      <DependentUpon>numberOfEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\phanCaForm.resx">
+      <DependentUpon>phanCaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="NhanVien_f\Form\quanLiCaLamForm.resx">
+      <DependentUpon>quanLiCaLamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\Form\salaryListForm.resx">
+      <DependentUpon>salaryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\UserControl_f\scheduleItem.resx">
+      <DependentUpon>scheduleItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\UserControl_f\scheduleListItem.resx">
+      <DependentUpon>scheduleListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien_f\UserControl_f\scheduleListWorkingItem.resx">
+      <DependentUpon>scheduleListWorkingItem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,6 +238,65 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Guna.UI2.WinForms">
+      <Version>2.0.1.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rubbish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotateleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foodtest4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
